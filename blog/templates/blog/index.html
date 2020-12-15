@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>LOLKEK</title>
+        {% load static %}
+        <link rel="stylesheet", href="{% static 'blog/css/bootstrap.min.css' %}", type="text/css">
+    </head>
+    <body>
+        <main role="main">
+        <div class ="jumbotron">
+            <div class = container>
+                {% for text in latest_topic_name %}
+                    <h1>{{ text.name }}</h1>
+                    <p>{{ text.text }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        </main>
+    </body>
+</html>
